@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <div class="form">
+            <form id="CadastroForm">
+                <div class="form-campo">
+                    <h1>Pizzaria do Bairro</h1>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" onblur="veri_nome()" > <br>
+                    <span class="error" id="erro-nome"></span>
+                </div>
+                
+                <div class="form-campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" onkeyup="veri_email()" required ><br>
+                    <span class="error" id="erro-email"></span>
+                </div>
+                
+                <div class="form-campo">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" onkeydown="veri_senha()" required>
+                    <button type="button" id="btn">Mostrar</button><br>
+                    <span class="error" id="erro-senha"></span>
+                </div>
+                
+                <div class="form-campo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="number" id="telefone" name="telefone" onkeyup="veri_tele()" required><br>
+                    <span class="error" id="erro-telefone"></span>
+                </div>
+                
+                <div class="form-campo">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" onkeyup="veri_end()" required ><br>
+                    <span class="error" id="erro-endereco"></span><br>
+                </div>
+                
+                <div class="sabores">
+                    <h3>Escolha o sabor</h3>
+                    <input type="checkbox" id="calabresa" name="sabor" class="item" value="25">
+                    <label for="calabresa">Calabresa - R$ 25,00</label><br>
+                    
+                    <input type="checkbox" id="queijo" name="sabor" class="item" value="25">
+                    <label for="queijo">Queijo - R$ 25,00</label><br>
+                    
+                    <input type="checkbox" id="portuguesa" name="sabor" class="item" value="27">
+                    <label for="portuguesa">Portuguesa - R$ 27,00</label><br>
+                    
+                    <input type="checkbox" id="mussarela" name="sabor" class="item" value="22">
+                    <label for="mussarela">Mussarela - R$ 22,00</label>
+                </div>
+                
+                <div class="adc">
+                    <h3>Escolhas adicionais</h3>
+                    <input type="checkbox" id="milho" name="adic" class="item" value="2" >
+                    <label for="milho">Milho - R$ 2,00</label><br>
+                    
+                    <input type="checkbox" id="ovo" name="adic" class="item" value="2">
+                    <label for="ovo">Ovo - R$ 2,00</label><br>
+                    
+                    <input type="checkbox" id="brc" name="adic" class="item" value="4">
+                    <label for="brc">Borda recheadas com catupiry - R$ 4,00</label><br>
+                    
+                    <input type="checkbox" id="brcho" name="adic" class="item" value="4">
+                    <label for="brcho">bordas recheadas com chocolate - R$ 4,00</label><br>
+                    <p>Total:</p>
+                    <span id="total">R$ 0,00</span>
+                    
+                </div>
+                
+                <button type="submit" id="enviar">Enviar pedido</button>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
